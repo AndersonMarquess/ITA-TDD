@@ -1,11 +1,23 @@
 public class Pilha {
+	
+	private Object elemento;
+	private int quantidade;
 
 	public boolean isEmpty() {
-		return true;
+		return elemento == null;
 	}
 
 	public int size() {
-		return 0;
+		return quantidade;
+	}
+
+	public void empilhar(Object elemento) {
+		this.elemento = elemento;
+		quantidade++;
+	}
+
+	public Object topo() {
+		return elemento;
 	}
 	
 }

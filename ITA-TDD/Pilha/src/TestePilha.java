@@ -12,6 +12,14 @@ class TestePilha {
 		assertEquals(0, pilha.size());
 	}
 	
-	
+	@Test
+	void adicionaUmItemNaPilha() {
+		Pilha pilha = new Pilha();
+
+		pilha.empilhar("primeiro");
+		assertFalse(pilha.isEmpty());
+		assertEquals(1, pilha.size());
+		assertEquals("primeiro", pilha.topo());
+	}
 
 }
