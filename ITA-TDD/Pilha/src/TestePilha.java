@@ -49,5 +49,14 @@ class TestePilha {
 	void removeItemDaPilhaVaziaLancaUmaException() {
 		assertThrows(PilhaVaziaException.class, () -> pilha.desempilhar());
 	}
+	
+	@Test()
+	void adicionarItemNaPilhaCheiaLancaException() {
+		for (int i = 0; i < 10; i++) {
+			pilha.empilhar("item "+i);
+		}
+		
+		assertThrows(PilhaCheiaException.class, () -> pilha.empilhar("Excedido"));
+	}
 
 }

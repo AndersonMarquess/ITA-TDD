@@ -16,6 +16,9 @@ public class Pilha {
 	}
 
 	public void empilhar(Object elemento) {
+		if(quantidade == elementos.length) {
+			throw new PilhaCheiaException("Não é possível adicionar novos elementos em uma pilha cheia.");
+		}
 		this.elementos[quantidade++] = elemento;
 	}
 
