@@ -1,7 +1,11 @@
 public class Pilha {
 	
-	private Object[] elementos = new Object[10];
+	private Object[] elementos;
 	private int quantidade;
+
+	public Pilha(int tamanho) {
+		this.elementos = new Object[tamanho];
+	}
 
 	public boolean isEmpty() {
 		return quantidade == 0;
@@ -13,7 +17,6 @@ public class Pilha {
 
 	public void empilhar(Object elemento) {
 		this.elementos[quantidade++] = elemento;
-		//quantidade++;
 	}
 
 	public Object topo() {
@@ -21,6 +24,10 @@ public class Pilha {
 	}
 
 	public Object desempilhar() {
+		if(isEmpty()) {
+			throw new PilhaVaziaException("Não é possível desempilha uma pilha vazia.");
+		}
+		
 		Object resultado = topo();
 		quantidade--;
 		return resultado;
