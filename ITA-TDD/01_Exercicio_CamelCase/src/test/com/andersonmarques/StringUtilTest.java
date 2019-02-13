@@ -58,5 +58,22 @@ class StringUtilTest {
 		assertTrue(resultado.contains("CPF"));
 		assertTrue(resultado.contains("contribuinte"));
 	}
-
+	
+	@Test
+	void separarNumeroNoMeioDasPalavras() {
+		List<String> resultado = StringUtil.converterCamelCase("recupera10Primeiros");
+		assertTrue(resultado.contains("recupera"));
+		assertTrue(resultado.contains("10"));
+		assertTrue(resultado.contains("primeiros"));
+	}
+	
+	@Test
+	void lancaExceptionSeComecarStringComNumero() {
+		assertThrows(IllegalArgumentException.class, () -> StringUtil.converterCamelCase("10Primeiros"));
+	}
+	
+	@Test
+	void lancaExceptionSeStringConterCaracteresEspeciais() {
+		assertThrows(IllegalArgumentException.class, () -> StringUtil.converterCamelCase("nome#Composto"));
+	}
 }
