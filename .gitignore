@@ -1,4 +1,4 @@
-/target/
+**/target/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
@@ -26,10 +26,11 @@
 
 ### Eclipse ###
 .classpath
+.editorconfig
 .project
 .settings/
 
 ### outros ###
 /out/
-*/.vscode/
+**/.vscode/
 .tern-project
