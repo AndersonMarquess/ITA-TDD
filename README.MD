@@ -7,3 +7,4 @@ Repositório para conter todo o conteúdo aprendido durante as aulas de TDD
 	2. Testes: TDD com Java - Alura.
 	3. Mock: Testes de comportamentos automatizados em Java - Alura.
 	4. Teste de Integração: Testes SQL e DAOs automatizados em java - Alura.
+	5. Selenium: Sua webapp testada de ponta a ponta em java - Alura.
